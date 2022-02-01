@@ -1,0 +1,87 @@
+.container-product{
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+    background-color: var(--principal-transparent);
+    box-shadow: 0px 4px 4px rgba(0,0,0,.25);
+
+    z-index: 1;
+}
+
+.container-product:hover{
+    opacity: .8;
+    transition: .4s
+}
+
+
+.container-products .product-name,
+.container-products .product-value,
+.container-products .product-quantity{
+    width: 100%;
+    padding: 5px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+
+    position: relative
+}
+
+.container-products .product-quantity button.edit-product,
+.container-products .product-quantity button.delete-product{
+    position: absolute;
+
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.container-products .product-quantity button.edit-product{
+    right: 60px;
+}
+
+.container-products .product-quantity button.delete-product{
+    right: 10px;
+}
+
+
+
+.container-products .product-quantity button.edit-product:hover,
+.container-products .product-quantity button.delete-product:hover{
+    font-size: 16px;
+    opacity: .6;
+    transition: .2s
+}
+
+
+.container-products hr{
+    width: 100%;
+    margin: 3px auto;
+}
+
+.container-confirm-delete{
+    height: 100%;
+    position: absolute;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.container-confirm-delete button{
+        background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.container-confirm-delete button:hover{
+    font-size: 16px;
+    opacity: .6;
+    transition: .2s
+}

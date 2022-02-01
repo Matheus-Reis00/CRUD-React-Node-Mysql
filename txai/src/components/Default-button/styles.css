@@ -1,0 +1,30 @@
+.container-button{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-button button{
+    padding: 8px 25px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    color: white;
+    background-color: var(--principal);
+    box-shadow: 1px 2px 4px rgba(0,0,0, .5);
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.container-button button:hover{
+    opacity: .6;
+    transition: .4s;
+}
+
+

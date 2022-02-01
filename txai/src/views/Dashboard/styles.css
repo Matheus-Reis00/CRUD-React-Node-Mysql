@@ -1,0 +1,89 @@
+.container-dashboard{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+
+    align-items: center;
+    position: relative;
+}
+
+/*header side bar*/
+
+.container-dashboard .sideBar{
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 50px 0px;
+
+    background-color: var(--principal-transparent);
+}
+
+.container-dashboard .sideBar h1{
+    width: 85%;
+    padding-bottom: 10px;
+    text-align: center;
+
+    color: white;
+    border-bottom: 5px solid #fff;
+}
+
+.container-dashboard .sideBar .sideBar-buttons{
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.container-dashboard .sideBar .sideBar-buttons button{
+    width: 100%;
+    padding: 40px 0px;
+    font-size: 25px;
+
+    border: none;
+
+    background: none;
+    color: white;
+
+    cursor: pointer;
+}
+
+.container-dashboard .sideBar .sideBar-buttons button:hover{
+    background-color: rgba(255, 255, 255, .3);
+    transition: .4s
+}
+
+.container-dashboard .sideBar .sideBar-buttons button.active{
+    background-color: rgba(255, 255, 255, .3);
+}
+
+/*conteúdo*/
+
+.container-dashboard .dashboard-content{
+    width: 100%;
+    height: 100vh;
+    padding: 0px 150px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

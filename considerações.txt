@@ -1,0 +1,17 @@
+- No meio do projeto surgiu a necessidade de fazer o mesmo em context-api (react)
+porém devido ao tempo curto continuei fazendo o projeto em prop drilling
+oque resultou em uma pequena bagunça organizada, rss :). Especifiquei isso pois possuo
+conhecimento em redux e context-api.
+
+- Considerei a identidade visual de vocês para construir o layout e o mesmo possui
+protótipo criado no figma, conforme link abaixo e dentro do projeto:
+ 
+https://www.figma.com/file/KpJmyOCzv6qkE4XEpDYfF3/Untitled?node-id=0%3A1
+
+- Foi utilizado o photoshop para fazer algumas alterações no fundo utilizado no projeto
+que atrapalhavam a visuzalização.
+
+- O projeto não é responsivo devido ao tempo curto que eu tive.
+
+
+

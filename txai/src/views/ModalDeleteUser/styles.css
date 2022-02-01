@@ -1,0 +1,38 @@
+.bg-modal-delete-user{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.bg-modal-delete-user .container-delete-user{
+    width: 400px;
+    height: 200px;
+    padding: 15px;
+
+    background-color: white;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-modal-delete-user .container-delete-user h1{
+    font-size: 16px;
+} 
+
+.bg-modal-delete-user .container-delete-user .delete-user-buttons{
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+
+/* .bg-modal-delete-user .container-delete-user{ */

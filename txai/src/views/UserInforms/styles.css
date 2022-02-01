@@ -1,0 +1,43 @@
+.container-user-informs{
+    width: 100%;
+
+}
+
+.container-user-informs hr{
+    width: 90%;
+    margin: 40px auto;
+}
+
+
+.container-user-informs .password-container{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.footer-user-informs{
+    width: 100%;
+    padding: 0px 150px;
+    bottom: 40px;
+    position: absolute;
+
+    display: flex;
+    justify-content: space-between
+}
+
+.footer-user-informs .left-buttons{
+    display: flex;
+    gap: 10px;
+}
+
+
+.footer-user-informs .container-button{
+    justify-content: flex-end;
+}
+
+
+.errorMessage{
+    color: white;
+    position: absolute;
+    bottom: 40px;
+}

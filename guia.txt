@@ -1,0 +1,7 @@
+NOTAS: 
+considerei que o usuário do mysql é: user: root, password: root
+caso não seja, basta trocar no arquivo .env e inserir as informações corretas
+
+- rode o comando npm install e em segida npm start em ambos os diretorios (txai e txai-server)
+
+- utilizar o script matheus_database para criar a database e suas tabelas

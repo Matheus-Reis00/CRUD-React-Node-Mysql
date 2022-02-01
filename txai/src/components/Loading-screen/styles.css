@@ -1,0 +1,53 @@
+.container-loading{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, .5);
+
+    z-index: 999;
+}
+
+.container-loading span{
+    z-index: 999;
+}
+
+.container-loading span span{
+    background-color: white;
+}
+
+.container-loading p {
+    color: white;
+    font-size: 25px;
+    margin-top: 15px;
+    margin-left: -20px;
+}
+
+.container-loading p:after{
+    content: '...';
+    color: white;
+    position: absolute;
+    animation-name: loading;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes loading {
+    0%{content: '.'}
+    66%{content: '..'}
+    100%{content: '...'}
+}
+
+
+
+
+
+
+
+
