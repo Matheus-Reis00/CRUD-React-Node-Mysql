@@ -1,5 +1,9 @@
 Tecnologias:
-React, Node.js/express/knex, Mysql
+JS, React, Node.js/express/knex, Mysql , HTML, CSS
+
+PROJETO:
+CRUD de usuário e produtos por usuário. Com uma interface interativa e com validação de erro é possível:
+Criar usuário, criar produto para usuário, atualizar informações de produto e usuário alem de listar todos os produtos.
 
 Guia para rodar o projeto:
 
