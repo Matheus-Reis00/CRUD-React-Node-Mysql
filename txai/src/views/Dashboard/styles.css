@@ -1,4 +1,4 @@
-.container-dashboard{
+.container-dashboard {
     display: grid;
     grid-template-columns: 1fr 4fr;
 
@@ -8,7 +8,7 @@
 
 /*header side bar*/
 
-.container-dashboard .sideBar{
+.container-dashboard .sideBar {
     width: 100%;
     height: 100vh;
 
@@ -22,7 +22,7 @@
     background-color: var(--principal-transparent);
 }
 
-.container-dashboard .sideBar h1{
+.container-dashboard .sideBar h1 {
     width: 85%;
     padding-bottom: 10px;
     text-align: center;
@@ -31,14 +31,25 @@
     border-bottom: 5px solid #fff;
 }
 
-.container-dashboard .sideBar .sideBar-buttons{
+.container-dashboard .sideBar .sideBar-buttons {
     width: 100%;
-    
+
     display: flex;
     flex-direction: column;
 }
 
-.container-dashboard .sideBar .sideBar-buttons button{
+.container-dashboard .sideBar .sideBar-buttons .blocked {
+    color: rgb(192, 192, 192, .5);
+}
+
+.container-dashboard .sideBar .sideBar-buttons .blocked:hover {
+    background-color: transparent;
+    cursor: default;
+}
+
+
+
+.container-dashboard .sideBar .sideBar-buttons button {
     width: 100%;
     padding: 40px 0px;
     font-size: 25px;
@@ -51,18 +62,18 @@
     cursor: pointer;
 }
 
-.container-dashboard .sideBar .sideBar-buttons button:hover{
+.container-dashboard .sideBar .sideBar-buttons button:hover {
     background-color: rgba(255, 255, 255, .3);
     transition: .4s
 }
 
-.container-dashboard .sideBar .sideBar-buttons button.active{
+.container-dashboard .sideBar .sideBar-buttons button.active {
     background-color: rgba(255, 255, 255, .3);
 }
 
 /*conteúdo*/
 
-.container-dashboard .dashboard-content{
+.container-dashboard .dashboard-content {
     width: 100%;
     height: 100vh;
     padding: 0px 150px;
@@ -74,16 +85,3 @@
 
     position: relative;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

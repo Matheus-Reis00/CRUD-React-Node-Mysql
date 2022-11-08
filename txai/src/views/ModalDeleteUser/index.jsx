@@ -7,7 +7,7 @@ export default function ModalDeleteUser({handleDeleteUser, userLogged, handleLog
 
     async function handleDeleteProduct () {
         try {
-            await axios.post('http://localhost:5000/user/delete', {
+            await axios.post(`${process.env.REACT_APP_URL_SERVER}/user/delete`, {
                 userLogged
             })
             handleLogout()

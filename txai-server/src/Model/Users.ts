@@ -6,6 +6,7 @@ class User extends Model{
     name: string
     password: string
     mail: string
+    isMaster: boolean | number
 
     static get jsonSchema() {
         return { 
@@ -17,7 +18,8 @@ class User extends Model{
                 password: {type: 'string'},
                 mail: {type: 'string'},
                 created_at: {type: 'string'},
-                updated_at: {type: 'string'}
+                updated_at: {type: 'string'},
+                isMaster: {type: 'boolean'}
             }
         }
     }

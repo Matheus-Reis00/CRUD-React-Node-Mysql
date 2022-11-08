@@ -18,10 +18,11 @@ export default function ModalCreateUser({ closeButton }) {
         if (userName.length > 0 && userPassword.length > 0 && userMail.length > 0 && userMail.length > 0) {
             if (userPassword === userRepeatPassword) {
                 try {
-                    await axios.post('http://localhost:5000/user/create', {
+                    await axios.post(`${process.env.REACT_APP_URL_SERVER}/user/create`, {
                         name: userName,
                         password: userPassword,
-                        mail: userMail
+                        mail: userMail,
+                        isMaster: false
                     })
                     closeButton()
                 } catch (e) {

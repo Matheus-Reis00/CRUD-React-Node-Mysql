@@ -18,7 +18,7 @@ export default function ModalUpdateProduct({ closeButton, updateProduct }) {
     const handleUpdateProduct = async () => {
         if (productName !== updateProduct?.name && productName.length > 0 || productValue !== updateProduct?.value && productValue.length > 0 || productQuantity !== updateProduct?.quantity && productQuantity.length > 0) {
             try {
-                await axios.post('http://localhost:5000/product/create', {
+                await axios.post(`${process.env.REACT_APP_URL_SERVER}/product/create`, {
                     name: productName,
                     value: productValue,
                     quantity: productQuantity,

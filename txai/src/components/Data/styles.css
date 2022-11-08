@@ -1,0 +1,37 @@
+.container-data {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    background-color: var(--principal-transparent);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, .25);
+
+    z-index: 1;
+}
+
+.container-data:hover {
+    opacity: .8;
+    transition: .4s
+}
+
+
+.container-data .data-name,
+.container-data .data-email,
+.container-data .data-admin {
+    width: 100%;
+    padding: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+
+    position: relative
+}
+
+.container-products hr {
+    width: 100%;
+    margin: 3px auto;
+}
