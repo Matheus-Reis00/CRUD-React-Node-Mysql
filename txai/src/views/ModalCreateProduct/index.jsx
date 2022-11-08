@@ -21,8 +21,8 @@ export default function ModalCreateProduct({ closeButton }) {
             const verifyDuplicateExists = allProducts?.filter(product => product.name == productName)
             if (verifyDuplicateExists?.length === 0) {
                 try {
-                console.log('entrou')
-                    await axios.post('http://localhost:5000/product/create', {
+                    console.log('entrou')
+                    await axios.post(`${process.env.REACT_APP_URL_SERVER}/product/create`, {
                         name: productName,
                         value: productValue,
                         quantity: productQuantity,
@@ -41,7 +41,7 @@ export default function ModalCreateProduct({ closeButton }) {
     }
 
     useEffect(async () => {
-        const { data } = await axios.post('http://localhost:5000/product/show', {
+        const { data } = await axios.post(`${process.env.REACT_APP_URL_SERVER}/product/show`, {
             mail: localStorage.getItem('mail')
         })
         setAllProducts(data)
@@ -53,19 +53,24 @@ export default function ModalCreateProduct({ closeButton }) {
                 <button onClick={() => closeButton()}><AiOutlineClose /></button>
             </div>
             <div className='container-create-user'>
-                <InputLogin inputTitle='Nome'
+                <InputLogin
+                    inputTitle='Nome'
                     onChangeState={setProductName}
                     titleColor={'#000'}
                     inputColor={'#dedede'}
                     inputBorder={'1px solid #aeaeae'}
                 />
-                <InputLogin inputTitle='Valor'
+                <InputLogin
+                    inputTitle='Valor'
+                    inputType="number"
                     onChangeState={setProductValue}
                     titleColor={'#000'}
                     inputColor={'#dedede'}
                     inputBorder={'1px solid #aeaeae'}
                 />
-                <InputLogin inputTitle='Quantidade'
+                <InputLogin
+                    inputTitle='Quantidade'
+                    inputType="number"
                     onChangeState={setProductQuantity}
                     titleColor={'#000'}
                     inputColor={'#dedede'}
@@ -73,7 +78,7 @@ export default function ModalCreateProduct({ closeButton }) {
                 />
 
                 <DefaultButton contentButton={'Criar'} actionButton={handleCreateProduct} />
-                <span style={{color: 'red'}}>{errorMessage}</span>
+                <span style={{ color: 'red' }}>{errorMessage}</span>
             </div>
         </div>
 

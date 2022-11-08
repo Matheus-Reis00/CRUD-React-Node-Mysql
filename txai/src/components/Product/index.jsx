@@ -6,9 +6,6 @@ import { MdOutlineDeleteForever } from 'react-icons/md'
 import { SiVerizon } from 'react-icons/si'
 import { AiOutlineClose } from 'react-icons/ai'
 
-
-import axios from 'axios';
-
 export default function Product({ productName, productValue, ProductQuantity, handleUpdateProduct, handleDeleteProduct, product }) {
 
     let productInforms = product

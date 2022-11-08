@@ -14,7 +14,7 @@ export default function Products({ handleCreateProduct, setUpdateProduct, create
 
     async function handleDeleteProduct (productInforms) {
         try {
-            await axios.post('http://localhost:5000/product/delete', {
+            await axios.post(`${process.env.REACT_APP_URL_SERVER}/product/delete`, {
                 productInforms
             })
         } catch (e) {
@@ -38,8 +38,9 @@ export default function Products({ handleCreateProduct, setUpdateProduct, create
     }
 
 
+
     useEffect(async () => {
-        const { data } = await axios.post('http://localhost:5000/product/show', {
+        const { data } = await axios.post(`${process.env.REACT_APP_URL_SERVER}/product/show`, {
             mail: localStorage.getItem('mail')
         })
         setAllProducts(data)

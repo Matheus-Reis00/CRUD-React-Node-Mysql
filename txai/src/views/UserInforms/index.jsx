@@ -4,12 +4,12 @@ import './styles.css'
 import DefaultButton from '../../components/Default-button';
 import InputInforms from '../../components/input-informs';
 import axios from 'axios';
-import { useHistory } from 'react-router';
 import ModalDeleteUser from '../ModalDeleteUser';
+import { useNavigate } from 'react-router-dom';
 
 export default function UserInforms({ userLogged, getUserLogged }) {
 
-    const history = useHistory()
+    const history = useNavigate()
 
     const [userNameUpdated, setUserNameUpdated] = useState(userLogged?.name)
     const [passwordUpdated, setPasswordUpdated] = useState('')
@@ -25,7 +25,7 @@ export default function UserInforms({ userLogged, getUserLogged }) {
         /*caso alguma informação seja vazia o servidor irá entender que é pra ignorar e atualizar somente oque foi solicitado*/
         if (userNameUpdated !== userLogged?.name || passwordUpdated.length > 0 || mailUpdated !== userLogged?.mail) {
             if (passwordUpdated === passwordUpdatedRepeat) {
-                const userUpdated = await axios.post('http://localhost:5000/user/create', {
+                const userUpdated = await axios.post(`${process.env.REACT_APP_URL_SERVER}/user/create`, {
                     name: userNameUpdated,
                     password: passwordUpdated,
                     mail: mailUpdated,
@@ -45,7 +45,7 @@ export default function UserInforms({ userLogged, getUserLogged }) {
 
     const handleLogout = () => {
         localStorage.clear()
-        history.goBack()
+        history("/")
     }
 
     const handleDeleteUser = () => {

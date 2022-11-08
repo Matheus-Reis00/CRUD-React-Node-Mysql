@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import './styles.css'
-import { useHistory } from 'react-router';
 import axios from 'axios';
 
 import LoadingScreen from '../../components/Loading-screen';
 import InputLogin from '../../components/Input-login';
 import DefaultButton from '../../components/Default-button';
 import ModalCreateUser from '../ModalCreateUser';
+import { useNavigate } from 'react-router';
 
 export default function Login() {
 
@@ -21,7 +21,7 @@ export default function Login() {
         setCreateUser(!createUser)
     }
 
-    const history = useHistory()
+    const history = useNavigate()
 
     const handleLogin = async () => {
         setLoading(true)
@@ -31,20 +31,21 @@ export default function Login() {
         if (user.length > 0 && password.length > 0) {
 
             try {
-                const { data: userDataBase } = await axios.post('http://localhost:5000/user/show', { mail: user })
-                console.log(userDataBase)
+                const { data: userDataBase } = await axios.post(`${process.env.REACT_APP_URL_SERVER}/user/show`, { mail: user })
+
                 if (userDataBase) {
+
                     if (userDataBase.password === userPassword.toString()) {
+                        console.log(userDataBase)
                         localStorage.setItem('mail', userDataBase.mail)
                         localStorage.setItem('id', userDataBase.id)
-                        history.push('/dashboard')
+                        history('/dashboard')
                         setLoading(false)
                     } else {
                         setErrorMessage('senha incorreta')
                         setLoading(false)
                     }
                 }
-
             } catch (e) {
                 setErrorMessage('usuário inexistente')
                 setLoading(false)

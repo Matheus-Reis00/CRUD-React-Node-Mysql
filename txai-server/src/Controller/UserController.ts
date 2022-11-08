@@ -8,6 +8,7 @@ class UserController {
     constructor() {
 
         router.post('/show', this.getUser)
+        router.post('/showall', this.getAllUsers)
         router.post('/create', this.postUser)
         router.post('/delete', this.deleteUser)
     }
@@ -18,6 +19,17 @@ class UserController {
                 res.status(400).send('usuário não encontrado')
             }
             res.send(user)
+        }catch(e){
+            res.status(400).send('erro ao buscar')
+        }
+    }
+    async getAllUsers(req: Request, res: Response) {
+        try{
+            const users = await userRepository.allUsers()
+            if(!users){
+                res.status(400).send('usuário não encontrado')
+            }
+            res.send(users)
         }catch(e){
             res.status(400).send('erro ao buscar')
         }
